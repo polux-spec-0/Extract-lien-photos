@@ -43,8 +43,9 @@
           links.forEach(a => {
             const href = a.href;
 
-            // Filtre : ignorer les liens file:///C:/html/...
+            // Filtres : ignorer certains liens indésirables
             if (href.startsWith("file:///C:/html/")) return;
+            if (href.startsWith("https://polux-spec-0.github.io/")) return;
 
             const li = document.createElement("li");
             const link = document.createElement("a");
